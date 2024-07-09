@@ -1,12 +1,76 @@
-# language-identifier
-Natural language processing, or NLP, combines computational linguistics—rule-based modeling of human language—with statistical and machine learning models to enable computers and digital devices to recognize, understand and generate text and speech.
+# Text Classification Project
 
-A branch of artificial intelligence (AI), NLP lies at the heart of applications and devices that can
+This project involves building and evaluating machine learning models for text classification. The primary objective is to identify the language of given text inputs.
 
-translate text from one language to another
-respond to typed or spoken commands
-recognize or authenticate users based on voice
-summarize large volumes of text
-assess the intent or sentiment of text or speech
-generate text or graphics or other content on demand
-often in real time. Today most people have interacted with NLP in the form of voice-operated GPS systems, digital assistants, speech-to-text dictation software, customer service chatbots, and other consumer conveniences. But NLP also plays a growing role in enterprise solutions that help streamline and automate business operations, increase employee productivity, and simplify mission-critical business processes.
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Dataset](#dataset)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Model Evaluation](#model-evaluation)
+- [Predictions](#predictions)
+- [Contributing](#contributing)
+
+## Project Overview
+
+This project aims to classify text into different languages using various machine learning models. It includes data preprocessing, training multiple models, evaluating their performance, and making predictions on new text data.
+
+## Dataset
+
+The dataset used in this project includes text samples in various languages. The text data is preprocessed to remove noise and converted into a suitable format for model training.
+
+## Installation
+
+To run this project, you need to have Python and Jupyter Notebook installed. You can install the required libraries using the following command:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+To use this project, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/your-repo-name.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd your-repo-name
+    ```
+3. Open the Jupyter Notebook:
+    ```bash
+    jupyter notebook Project.ipynb
+    ```
+
+## Model Evaluation
+
+The notebook evaluates the performance of different machine learning models using accuracy scores and confusion matrices. The following models are evaluated:
+
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- Support Vector Machine (SVM)
+
+The confusion matrices for each model are displayed to provide insights into their performance.
+
+## Predictions
+
+To make predictions on new text data, use the `prediction` function defined in the notebook. Here's an example:
+
+```python
+def prediction(text):
+    x = CV.transform([text]).toarray()
+    lang = model.predict(x)
+    lang = encoder.inverse_transform(lang)
+    print("This word/sentence contains {} word(s).".format(lang[0]))
+
+# Example usage
+prediction("Your sample text here")
+```
+
+## Contributing
+
+Contributions are welcome! Please create a pull request or open an issue to discuss your ideas or improvements.
